@@ -26,9 +26,9 @@
         </header>
 
         <div class="button-container">
-            <button class="rock-button" onclick="userchoice = 'ROCK'; mainScript();"><img src="images/rock.svg" alt="rock"></button>
-            <button class="paper-button" onclick="userchoice = 'PAPER'; mainScript();"><img src="images/paper.svg" alt="paper"></button>
-            <button class="scissors-button" onclick="userchoice = 'SCISSORS'; mainScript();"><img src="images/scissors.svg" alt="scissors"></button>
+            <button class="rock-button" onclick="mainScript('ROCK');"><img src="images/rock.svg" alt="rock"></button>
+            <button class="paper-button" onclick=" mainScript('PAPER');"><img src="images/paper.svg" alt="paper"></button>
+            <button class="scissors-button" onclick=" mainScript('SCISSORS');"><img src="images/scissors.svg" alt="scissors"></button>
             <button class="reset" onclick="resetGame()">RESET</button>
         </div>
 
@@ -53,7 +53,7 @@
             }
         }
 
-        function gameDecision() {
+        function gameDecision(userchoice) {
             if (computerChoice === userchoice) {
                 alert("It's a tie \n No score awarded");
 
@@ -72,11 +72,11 @@
             }
         }
 
-        function mainScript() {
+        function mainScript(userchoice) {
             // This is the main function that runs all the code
 
             computerChoiceAlgorithm();
-            gameDecision();
+            gameDecision(userchoice);
 
             if (computerScore === 10 || userScore == 10) {
                 alert(`This round has ended \n USER SCORE: ${userScore} | COMPUTER SCORE: ${computerScore}`);

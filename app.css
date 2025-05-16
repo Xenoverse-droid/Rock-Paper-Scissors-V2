@@ -89,7 +89,7 @@ img {
 
 
 button:active {
-    transform: translate(0, -1rem);
+    transform: translate(0, -2rem);
 }
 
 .button-container {
